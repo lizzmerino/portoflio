@@ -162,6 +162,23 @@ a {
   display: block;
 }
 
+.behance-link {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-muted);
+  padding-bottom: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.behance-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
 @media (max-width: 600px) {
   .project h1 {
     font-size: 2.1rem;
@@ -209,17 +226,21 @@ a {
   <!-- ===== PROYECTO: YOFTH ===== -->
   <section class="project">
     <a href="index.html#galeria" class="back-link">&larr; Back to Portfolio</a>
-    <h1>Yofth</h1>
-    <p class="project-meta">Digital illustration · Personal work</p>
+    <h1>Year of the Horse</h1>
+    <p class="project-meta">Digital illustration · Carlsberg × itsme.biz mentorship</p>
     <p class="project-desc">
-      A festive illustration celebrating abundance: two horses flank a
-      bottle beneath glowing lanterns, surrounded by blooming peonies and
-      warm, radiant color.
+      Created for Carlsberg as part of a mentorship project with itsme.biz,
+      this piece celebrates the Chinese New Year of the Horse. Working within
+      the brand's color palette, two horses flank a bottle beneath glowing
+      lanterns and blooming peonies — a festive design built around the
+      energy, strength, and renewal the Horse represents.
     </p>
 
     <div class="project-image">
       <img src="yofth.jpg" alt="Illustration of two horses flanking a bottle, surrounded by lanterns and flowers">
     </div>
+
+    <a class="behance-link" href="https://www.behance.net/gallery/244390171/Year-of-the-horse" target="_blank" rel="noopener">View full project on Behance &rarr;</a>
   </section>
 
   <footer class="site-footer">
