@@ -200,6 +200,23 @@ a {
   font-size: 1.2rem;
 }
 
+.behance-link {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-muted);
+  padding-bottom: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.behance-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
 @media (max-width: 600px) {
   .carousel {
     gap: 10px;
@@ -274,6 +291,8 @@ a {
     </div>
     <p class="carousel-caption" id="carousel-caption">Goddess of Action</p>
     <p class="carousel-counter" id="carousel-counter">1 / 4</p>
+
+    <a class="behance-link" href="https://www.behance.net/gallery/240938737/DIOSA-ENERGY-Oracle-deck" target="_blank" rel="noopener">View full project on Behance &rarr;</a>
   </section>
 
   <footer class="site-footer">
