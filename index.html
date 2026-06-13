@@ -121,6 +121,8 @@ a {
 }
 
 .gallery-item {
+  position: relative;
+  display: block;
   overflow: hidden;
   border-radius: 4px;
   aspect-ratio: 1 / 1;
@@ -136,6 +138,31 @@ a {
 
 .gallery-item:hover img {
   transform: scale(1.05);
+}
+
+.gallery-item::after {
+  content: "View project";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(46, 42, 38, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  pointer-events: none;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+  background: rgba(46, 42, 38, 0.35);
 }
 
 /* Variación tipo "masonry": algunas piezas ocupan más espacio */
@@ -233,6 +260,115 @@ a {
   color: var(--color-accent);
 }
 
+/* ===== PROYECTO (página individual) ===== */
+.project {
+  padding: 60px 5% 100px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--color-accent);
+}
+
+.project h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.project-meta {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.project-desc {
+  color: var(--color-muted);
+  max-width: 560px;
+  margin: 0 auto 48px;
+  font-size: 1.05rem;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carousel-image {
+  max-width: 480px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.carousel-image img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-text);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.carousel-counter {
+  margin-top: 24px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+}
+
+.carousel-caption {
+  margin-top: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    gap: 10px;
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .project h1 {
+    font-size: 2.1rem;
+  }
+}
+
 /* ===== FOOTER ===== */
 .site-footer {
   padding: 32px 5%;
@@ -296,33 +432,33 @@ a {
   <!-- ===== HERO / GALERÍA ===== -->
   <section id="galeria" class="gallery">
     <div class="gallery-grid">
-      <figure class="gallery-item">
-        <img src="ballena.jpg" alt="Ilustración de una ballena">
-      </figure>
-      <figure class="gallery-item">
-        <img src="halcon.jpg" alt="Ilustración de un halcón">
-      </figure>
-      <figure class="gallery-item">
-        <img src="mariposa.jpg" alt="Ilustración de una mariposa">
-      </figure>
-      <figure class="gallery-item">
-        <img src="ballena-blanca.jpg" alt="Ilustración de una gran ballena blanca">
-      </figure>
-      <figure class="gallery-item">
-        <img src="pinguino.jpg" alt="Ilustración de un pingüino">
-      </figure>
-      <figure class="gallery-item">
-        <img src="carta-1.jpg" alt="Ilustración de carta con nombre 1">
-      </figure>
-      <figure class="gallery-item">
-        <img src="carta-2.jpg" alt="Ilustración de carta con nombre 2">
-      </figure>
-      <figure class="gallery-item">
-        <img src="carta-3.jpg" alt="Ilustración de carta con nombre 3">
-      </figure>
-      <figure class="gallery-item">
-        <img src="carta-4.jpg" alt="Ilustración de carta con nombre 4">
-      </figure>
+      <a href="animales.html?start=0" class="gallery-item">
+        <img src="ballena.jpg" alt="Illustration of a whale">
+      </a>
+      <a href="animales.html?start=1" class="gallery-item">
+        <img src="halcon.jpg" alt="Illustration of a hawk">
+      </a>
+      <a href="animales.html?start=2" class="gallery-item">
+        <img src="mariposa.jpg" alt="Illustration of a butterfly">
+      </a>
+      <a href="animales.html?start=3" class="gallery-item">
+        <img src="ballena-blanca.jpg" alt="Illustration of a great white whale">
+      </a>
+      <a href="animales.html?start=4" class="gallery-item">
+        <img src="pinguino.jpg" alt="Illustration of a penguin">
+      </a>
+      <a href="diosas.html?start=0" class="gallery-item">
+        <img src="carta-1.jpg" alt="Illustration of the Goddess of Action card">
+      </a>
+      <a href="diosas.html?start=1" class="gallery-item">
+        <img src="carta-2.jpg" alt="Illustration of the Goddess of Water card">
+      </a>
+      <a href="diosas.html?start=2" class="gallery-item">
+        <img src="carta-3.jpg" alt="Illustration of the Infinite Possibilities card">
+      </a>
+      <a href="diosas.html?start=3" class="gallery-item">
+        <img src="carta-4.jpg" alt="Illustration of the Goddess of Creativity card">
+      </a>
     </div>
   </section>
 
