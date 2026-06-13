@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liz Merino · Ilustración</title>
+  <meta name="description" content="Portafolio de ilustración de Liz Merino">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+/* =========================================
+   Portafolio de ilustración — estilo minimalista
+   Inspirado en julianplum.com
+   ========================================= */
+
+:root {
+  --color-bg: #faf8f5;
+  --color-text: #2e2a26;
+  --color-muted: #6b6258;
+  --color-accent: #c98a6b;
+  --max-width: 1200px;
+  --gap: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== HEADER / NAV ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 28px 5%;
+  position: sticky;
+  top: 0;
+  background: rgba(250, 248, 245, 0.9);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav a, .social {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover, .social:hover {
+  color: var(--color-accent);
+}
+
+.social {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-text);
+  padding: 8px 18px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.social:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+/* ===== GALERÍA ===== */
+.gallery {
+  padding: 40px 5% 80px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Variación tipo "masonry": algunas piezas ocupan más espacio */
+.gallery-item:nth-child(4) {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+/* ===== SOBRE MÍ ===== */
+.about {
+  padding: 100px 5%;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.4rem;
+  margin-bottom: 28px;
+}
+
+.about p {
+  margin-bottom: 18px;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.about code {
+  background: #f1ece6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* ===== CONTACTO ===== */
+.contact {
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.contact p {
+  color: var(--color-muted);
+  margin-bottom: 24px;
+}
+
+.email-link {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  border-bottom: 1px solid var(--color-text);
+  padding-bottom: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.email-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.contact-social {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-social a:hover {
+  color: var(--color-accent);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  padding: 32px 5%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .nav {
+    gap: 18px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .gallery-item:nth-child(4) {
+    grid-column: span 1;
+    aspect-ratio: 1 / 1;
+  }
+
+  .about h2, .contact h2 {
+    font-size: 1.9rem;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="site-header">
+    <a href="#inicio" class="logo">Liz Merino</a>
+    <nav class="nav">
+      <a href="#galeria">Portafolio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="social" href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener">Instagram</a>
+  </header>
+
+  <!-- ===== HERO / GALERÍA ===== -->
+  <section id="galeria" class="gallery">
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="ballena.jpg" alt="Ilustración de una ballena">
+      </figure>
+      <figure class="gallery-item">
+        <img src="halcon.jpg" alt="Ilustración de un halcón">
+      </figure>
+      <figure class="gallery-item">
+        <img src="mariposa.jpg" alt="Ilustración de una mariposa">
+      </figure>
+      <figure class="gallery-item">
+        <img src="ballena-blanca.jpg" alt="Ilustración de una gran ballena blanca">
+      </figure>
+      <figure class="gallery-item">
+        <img src="pinguino.jpg" alt="Ilustración de un pingüino">
+      </figure>
+      <figure class="gallery-item">
+        <img src="carta-1.jpg" alt="Ilustración de carta con nombre 1">
+      </figure>
+      <figure class="gallery-item">
+        <img src="carta-2.jpg" alt="Ilustración de carta con nombre 2">
+      </figure>
+      <figure class="gallery-item">
+        <img src="carta-3.jpg" alt="Ilustración de carta con nombre 3">
+      </figure>
+      <figure class="gallery-item">
+        <img src="carta-4.jpg" alt="Ilustración de carta con nombre 4">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE MÍ ===== -->
+  <section id="sobre-mi" class="about">
+    <div class="about-content">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy Liz Merino, ilustradora dedicada a crear imágenes cálidas y llenas de detalle
+        para libros infantiles, editoriales y proyectos personales. Mi trabajo combina
+        técnicas tradicionales y digitales, inspirado en la naturaleza, los colores
+        suaves y las historias que invitan a soñar.
+      </p>
+      <p>
+        Este texto es un ejemplo — edítalo para contar tu propia historia: tu formación,
+        tu estilo, los medios que usas y los proyectos en los que te gustaría trabajar.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="contact">
+    <div class="contact-content">
+      <h2>Contacto</h2>
+      <p>¿Tienes un proyecto en mente? Escríbeme, me encantaría escucharlo.</p>
+      <a class="email-link" href="mailto:lizmerinoc@gmail.com">lizmerinoc@gmail.com</a>
+      <div class="contact-social">
+        <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">Behance</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Liz Merino. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
