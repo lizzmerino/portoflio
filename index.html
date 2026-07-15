@@ -166,10 +166,6 @@ a {
 }
 
 /* Variación tipo "masonry": algunas piezas ocupan más espacio */
-.gallery-item:nth-child(4) {
-  grid-column: span 2;
-  aspect-ratio: 2 / 1;
-}
 
 /* Encuadre personalizado: centra el recorte en el rostro/figura principal */
 .gallery-item:nth-child(6) img {
@@ -184,8 +180,8 @@ a {
   object-position: center 12%;
 }
 
-/* Yofth: imagen ancha, igual que ballena-blanca */
-.gallery-item:nth-child(10) {
+/* Yofth: imagen ancha */
+.gallery-item--wide {
   grid-column: span 2;
   aspect-ratio: 2 / 1;
 }
@@ -465,7 +461,7 @@ a {
       <a href="animales.html?start=2" class="gallery-item">
         <img src="mariposa.jpg" alt="Illustration of a butterfly">
       </a>
-      <a href="animales.html?start=3" class="gallery-item">
+      <a href="animales.html?start=3" class="gallery-item gallery-item--wide">
         <img src="ballena-blanca.jpg" alt="Illustration of a great white whale">
       </a>
       <a href="animales.html?start=4" class="gallery-item">
@@ -483,11 +479,26 @@ a {
       <a href="diosas.html?start=3" class="gallery-item">
         <img src="carta-4.jpg" alt="Illustration of the Goddess of Creativity card">
       </a>
-      <a href="yofth.html" class="gallery-item">
-        <img src="yofth.jpg" alt="Illustration of two horses flanking a bottle, surrounded by lanterns and flowers">
+      <a href="cacomixtle.html" class="gallery-item">
+        <img src="cacomixtle-thumb.jpg" alt="Cacomixtle for Mexican Lottery">
       </a>
-      <a href="shelob.html" class="gallery-item">
-        <img src="shelob-thumb.jpg" alt="Illustration of a spider emerging from a flower amid foliage">
+      <a href="madreporas.html" class="gallery-item">
+        <img src="Madreporas_migala.png" alt="Madreporas — illustration for Migala magazine">
+      </a>
+      <a href="ladysoft.html?start=0" class="gallery-item">
+        <img src="ladysoft-1-thumb.jpg" alt="Illustration of The Weaver, a card from the Sacred Cycle Oracle deck">
+      </a>
+      <a href="ladysoft.html?start=2" class="gallery-item">
+        <img src="ladysoft-3-thumb.jpg" alt="Illustration of The Runner, a card from the Sacred Cycle Oracle deck">
+      </a>
+      <a href="acapulco.html?start=0" class="gallery-item">
+        <img src="cove_acuerdate.png" alt="Acuérdate de Acapulco book cover illustration">
+      </a>
+      <a href="ausencia.html?start=0" class="gallery-item">
+        <img src="cover_ausencia.jpg" alt="Ausencia book cover illustration">
+      </a>
+      <a href="yofth.html" class="gallery-item gallery-item--wide">
+        <img src="yofth.jpg" alt="Illustration of two horses flanking a bottle, surrounded by lanterns and flowers">
       </a>
       <a href="night-rising.html" class="gallery-item">
         <img src="Cp48contest.png" alt="Night Rising — illustration for Clip Studio Paint Contest 48, Moon and Stars">
