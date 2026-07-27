@@ -434,6 +434,37 @@ a {
     font-size: 1.9rem;
   }
 }
+
+/* ===== REPRESENTED BY ===== */
+.represented-by {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  text-align: center;
+}
+.rep-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 16px;
+}
+.rep-logo {
+  width: 200px;
+  max-width: 60%;
+  height: auto;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+.rep-logo:hover { opacity: 0.7; }
+.rep-contact {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  color: var(--color-muted);
+}
+.rep-contact a { color: var(--color-muted); transition: color 0.2s ease; }
+.rep-contact a:hover { color: var(--color-accent); }
   </style>
 </head>
 <body>
@@ -482,7 +513,9 @@ a {
       <a href="night-rising.html" class="gallery-item">
         <img src="Cp48contest.png" alt="Night Rising — illustration for Clip Studio Paint Contest 48, Moon and Stars">
       </a>
-      <a href="salome.html" class="gallery-item"><img src="Salome2.jpg" alt="Salome, personal illustration by Liz Merino"></a>
+      <a href="salome.html" class="gallery-item">
+        <img src="Salome2.jpg" alt="Salome — personal illustration by Liz Merino">
+      </a>
       <a href="cacomixtle.html" class="gallery-item">
         <img src="cacomixtle-thumb.jpg" alt="Cacomixtle for Mexican Lottery">
       </a>
@@ -529,6 +562,18 @@ a {
       <div class="contact-social">
         <a href="https://www.instagram.com/lizz_mc_art/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.behance.net/lizz_mc" target="_blank" rel="noopener">Behance</a>
+      </div>
+
+      <div class="represented-by">
+        <p class="rep-label">Represented by</p>
+        <a href="http://illustrationx.com/LizMerino" target="_blank" rel="noopener">
+          <img src="IllustrationX-logo.jpg" alt="IllustrationX" class="rep-logo">
+        </a>
+        <p class="rep-contact">
+          <a href="http://illustrationx.com/LizMerino" target="_blank" rel="noopener">illustrationx.com/LizMerino</a> &middot;
+          <a href="mailto:howdy@illustrationx.com">howdy@illustrationx.com</a> &middot;
+          <a href="tel:+16468080205">+1 646 808 0205</a>
+        </p>
       </div>
     </div>
   </section>
