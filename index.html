@@ -419,6 +419,73 @@ a {
   background: #fff;
 }
 
+/* ===== SHOP ===== */
+.shop {
+  scroll-margin-top: 110px;
+  padding: 80px 5% 90px;
+  background: var(--color-bg);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+}
+.shop h2 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+.shop-intro {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+}
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 36px 24px 32px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 4px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.shop-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+.shop-card h3 {
+  font-size: 1.6rem;
+}
+.shop-card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+.shop-store {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-text);
+  padding: 8px 18px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+.shop-card:hover .shop-store {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+@media (max-width: 800px) {
+  .shop-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .shop h2 { font-size: 1.9rem; }
+  .shop { scroll-margin-top: 180px; }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 800px) {
   .gallery-grid {
@@ -501,6 +568,7 @@ a {
     <nav class="nav">
       <a href="#galeria">Portfolio</a>
       <a href="#sobre-mi">About</a>
+      <a href="#shop">Shop</a>
       <a href="#contacto">Contact</a>
     </nav>
     <div class="social-icons">
@@ -589,6 +657,24 @@ a {
         My work blends traditional and digital techniques, inspired by nature,
         femininity, surrealism and magic stories.
       </p>
+    </div>
+  </section>
+
+  <!-- ===== SHOP ===== -->
+  <section id="shop" class="shop">
+    <h2>Shop</h2>
+    <p class="shop-intro">Take a little piece of my work home.</p>
+    <div class="shop-grid">
+      <a href="https://lizzmcart.bigcartel.com/" class="shop-card" target="_blank" rel="noopener">
+        <h3>Stickers &amp; Risos</h3>
+        <p>Stickers, risographs and limited pieces, shipped by me.</p>
+        <span class="shop-store">Big Cartel</span>
+      </a>
+      <a href="https://www.inprnt.com/gallery/lizmerino/" class="shop-card" target="_blank" rel="noopener">
+        <h3>Art Prints</h3>
+        <p>Museum-quality giclée prints of my illustrations.</p>
+        <span class="shop-store">INPRNT</span>
+      </a>
     </div>
   </section>
 
